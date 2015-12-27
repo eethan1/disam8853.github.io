@@ -9,6 +9,9 @@ permalink:          /:year/:month/:day/:title.html
 # Markdown
 markdown:           rdiscount
 
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-71791811-1
+
 # Navigation
 nav:
   - name:           "About"

@@ -29,4 +29,4 @@ Expected: «Not a WMF site» would appear only once, with 5 requests.
 
 在找bug的過程中，我也順便了解了[d3.v3.min.js](https://gist.github.com/grantmichaels/5237322) 和[jquery.js](https://jquery.com/download/) 這兩個javascript函式庫的一小部份，之後又花了更多時間學怎麼用[Gerrit](https://gerrit.wikimedia.org)，Gerrit比較少人用，大部分的教學都只有英文，對於一個英文不好的高中生來說，要學會真的有點困難，幸好當時段考剛好考完有充份的時間去閱讀，另外我用菜英文問的問題，mentors都很有耐心的幫我找解決辦法，現在回去看當時的流言，我都覺得很丟臉。
 
-總而言之，我還是完成了我再GCI的第一個task，太棒了！
+總而言之，我還是完成了我GCI的第一個task，太棒了！

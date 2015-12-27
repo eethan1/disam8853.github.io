@@ -79,7 +79,7 @@ Expected: «Not a WMF site» would appear only once, with 5 requests.&lt;/p&gt;
 
 &lt;p&gt;在找bug的過程中，我也順便了解了&lt;a href=&quot;https://gist.github.com/grantmichaels/5237322&quot;&gt;d3.v3.min.js&lt;/a&gt; 和&lt;a href=&quot;https://jquery.com/download/&quot;&gt;jquery.js&lt;/a&gt; 這兩個javascript函式庫的一小部份，之後又花了更多時間學怎麼用&lt;a href=&quot;https://gerrit.wikimedia.org&quot;&gt;Gerrit&lt;/a&gt;，Gerrit比較少人用，大部分的教學都只有英文，對於一個英文不好的高中生來說，要學會真的有點困難，幸好當時段考剛好考完有充份的時間去閱讀，另外我用菜英文問的問題，mentors都很有耐心的幫我找解決辦法，現在回去看當時的流言，我都覺得很丟臉。&lt;/p&gt;
 
-&lt;p&gt;總而言之，我還是完成了我再GCI的第一個task，太棒了！&lt;/p&gt;
+&lt;p&gt;總而言之，我還是完成了我GCI的第一個task，太棒了！&lt;/p&gt;
 </description>
 				<pubDate>Tue, 01 Dec 2015 00:00:00 +0800</pubDate>
 				<link>/2015/12/01/first-task-GCI.html</link>
