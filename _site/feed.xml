@@ -47,5 +47,44 @@
 				<guid isPermaLink="true">/2015/12/27/second-task-GCI.html</guid>
 			</item>
 		
+			<item>
+				<title>在google code-in 的第一個task</title>
+        <description>&lt;p&gt;&lt;p class=&quot;lead&quot;&gt;Google Code-in是一個由google舉辦給13到17歲學生的比賽，由許多像是&lt;a href=&quot;http://fossasia.org&quot;&gt;FOSSASIA&lt;/a&gt;的open source社群出任務，完成一個任務就可以獲得一張電子證書，3個任務可獲得一件google的T-shirt，最後每個社群還可邀請兩個學生前往位於加州的google總部參觀，&lt;p&gt;&lt;/p&gt;
+
+&lt;h2&gt;任務說明&lt;/h2&gt;
+
+&lt;blockquote&gt;&lt;p&gt;See https://phabricator.wikimedia.org/T119450&lt;/p&gt;
+
+&lt;p&gt;Go to https://transparency.wikimedia.org/content.html
+Scroll down to “Which Wikimedia projects were targeted?” (why don&#39;t headers there have an id?)
+Select &quot;All&quot;
+The third bar is «Not a WMF site» with 4 requests.
+The last bar is «Not a WMF site» with 1 request.
+Expected: «Not a WMF site» would appear only once, with 5 requests.&lt;/p&gt;
+
+&lt;p&gt;The codebase is under https://gerrit.wikimedia.org/r/#/admin/projects/wikimedia/TransparencyReport - you are expected to check out the codebase and provide a patch in Wikimedia Gerrit to fix this issue.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h2&gt;過程&lt;/h2&gt;
+
+&lt;p&gt;翻成中文就是要我在&lt;a href=&quot;https://transparency.wikimedia.org/content.html&quot;&gt;這個&lt;/a&gt; 網站下面的統計中，合併兩個相同的選項，對於一個寫出這麼漂亮網站的人來說，不可能犯這種小錯誤，所以一定是故意給GCI學生的bug，所以我就二話不說給他cliam了。&lt;/p&gt;
+
+&lt;p&gt;結果只是他統計資料中數據的英文字母大小寫不一樣而導致程式判定成兩個不同的選項而已。&lt;/p&gt;
+
+&lt;h2&gt;成果&lt;/h2&gt;
+
+&lt;p&gt;我上傳在gerrit上的patch
+&lt;img src=&quot;http://screenshot.net/847dzcp.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;總結&lt;/h2&gt;
+
+&lt;p&gt;在找bug的過程中，我也順便了解了&lt;a href=&quot;https://gist.github.com/grantmichaels/5237322&quot;&gt;d3.v3.min.js&lt;/a&gt; 和&lt;a href=&quot;https://jquery.com/download/&quot;&gt;jquery.js&lt;/a&gt; 這兩個javascript函式庫的一小部份，之後又花了更多時間學怎麼用&lt;a href=&quot;https://gerrit.wikimedia.org&quot;&gt;Gerrit&lt;/a&gt;，Gerrit比較少人用，大部分的教學都只有英文，對於一個英文不好的高中生來說，要學會真的有點困難，幸好當時段考剛好考完有充份的時間去閱讀，另外我用菜英文問的問題，mentors都很有耐心的幫我找解決辦法，現在回去看當時的流言，我都覺得很丟臉。&lt;/p&gt;
+
+&lt;p&gt;總而言之，我還是完成了我再GCI的第一個task，太棒了！&lt;/p&gt;
+</description>
+				<pubDate>Tue, 01 Dec 2015 00:00:00 +0800</pubDate>
+				<link>/2015/12/01/first-task-GCI.html</link>
+				<guid isPermaLink="true">/2015/12/01/first-task-GCI.html</guid>
+			</item>
+		
 	</channel>
 </rss>
