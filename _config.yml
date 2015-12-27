@@ -1,0 +1,38 @@
+# Basic
+name:               "Disam"
+
+# URL
+baseurl:            "/Disam"
+#baseurl:            "" #For Root Domain
+permalink:          /:year/:month/:day/:title.html
+
+# Markdown
+markdown:           rdiscount
+
+# Navigation
+nav:
+  - name:           "About"
+    href:           about.html
+  - name:           "Facebook"
+    href:           "//www.facebook.com/www.sam3"
+  - name:           "FOSSASIA"
+    href:           "//fossasia.org"
+
+# Sass
+sass:
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"

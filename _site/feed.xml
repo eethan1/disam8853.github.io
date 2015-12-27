@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Disam</title>
+		<link></link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>在google code-in 的第二個task</title>
+        <description>&lt;p&gt;&lt;p class=&quot;lead&quot;&gt;Google Code-in是一個由google舉辦給13到17歲學生的比賽，由許多像是&lt;a href=&quot;http://fossasia.org&quot;&gt;FOSSASIA&lt;/a&gt;的open source社群出任務，完成一個任務就可以獲得一張電子證書，3個任務可獲得一件google的T-shirt，最後每個社群還可邀請兩個學生前往位於加州的google總部參觀，&lt;p&gt;&lt;/p&gt;
+
+&lt;h2&gt;任務說明&lt;/h2&gt;
+
+&lt;blockquote&gt;&lt;h3&gt;Objective&lt;/h3&gt;
+
+&lt;p&gt;Github pages allows hosting of websites. Host a Jekyll website / blog using github pages and add a relevant blog entry about your participation at GCI with FOSSASIA.&lt;/p&gt;
+
+&lt;h3&gt;Requirements&lt;/h3&gt;
+
+&lt;p&gt;Create the website using github pages and jekyll and post some interested facts about you, your participation at GCI with FOSSASIA and your ideas and add some images. Tweet about it when you are finished.&lt;/p&gt;
+
+&lt;h3&gt;Expected Outcome&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;understanding Github pages and Jekyll&lt;/li&gt;
+&lt;li&gt;Jekyll website as github pages&lt;/li&gt;
+&lt;li&gt;site with a link to FOSSASIA (http://fossasia.org)&lt;/li&gt;
+&lt;li&gt;blog post about your experience with an image&lt;/li&gt;
+&lt;li&gt;link to tweet, e.g. &quot;Set up a #Jekyll blog at #GCI with #FOSSASIA http://my-jekyll-blo-site @fossasia @hpdang&quot;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Links&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jekyll - https://jekyllrb.com/&lt;/li&gt;
+&lt;li&gt;Github - http://pages.github.com/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;翻成中文應該是要我用&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 在&lt;a href=&quot;http://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; 上架設一個blog，並且分享到twitter，但是我沒有twitter，幸好mentors同意讓我po在fb上。&lt;/p&gt;
+
+&lt;p&gt;而這個blog就是我的成果，做的不是很精美，但是該有的功能都有了，額外的功能就等我有時間再加上去吧。&lt;/p&gt;
+</description>
+				<pubDate>Sun, 27 Dec 2015 00:00:00 +0800</pubDate>
+				<link>/2015/12/27/second-task-GCI.html</link>
+				<guid isPermaLink="true">/2015/12/27/second-task-GCI.html</guid>
+			</item>
+		
+	</channel>
+</rss>
