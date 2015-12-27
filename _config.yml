@@ -2,7 +2,7 @@
 name:               "Disam"
 
 # URL
-baseurl:            "/"
+baseurl:            ""
 #baseurl:            "" #For Root Domain
 permalink:          /:year/:month/:day/:title.html
 
