@@ -6,41 +6,51 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>陳弈憲是廢物</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;開頭&lt;/h2&gt;
+&lt;p&gt;在松山高中裡，有個眾人皆知的廢物、人渣——陳弈憲&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;原因&lt;/h2&gt;
+&lt;p&gt;不知道為甚麼，他在高一的時候，突然從一個普通人，逐漸變成了廢物。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;解決辦法&lt;/h2&gt;
+&lt;p&gt;無&lt;/p&gt;
+</description>
+				<pubDate>Mon, 01 Feb 2016 00:00:00 +0800</pubDate>
+				<link>/2016/02/01/vic-chen-is-suck.html</link>
+				<guid isPermaLink="true">/2016/02/01/vic-chen-is-suck.html</guid>
+			</item>
+		
+			<item>
 				<title>在google code-in 的第二個task</title>
-        <description>&lt;p&gt;&lt;p class=&quot;lead&quot;&gt;Google Code-in是一個由google舉辦給13到17歲學生的比賽，由許多像是&lt;a href=&quot;http://fossasia.org&quot;&gt;FOSSASIA&lt;/a&gt;的open source社群出任務，完成一個任務就可以獲得一張電子證書，3個任務可獲得一件google的T-shirt，最後每個社群還可邀請兩個學生前往位於加州的google總部參觀，&lt;p&gt;&lt;/p&gt;
+        <description>&lt;p class=&quot;lead&quot;&gt;Google Code-in是一個由google舉辦給13到17歲學生的比賽，由許多像是[FOSSASIA](http://fossasia.org)的open source社群出任務，完成一個任務就可以獲得一張電子證書，3個任務可獲得一件google的T-shirt，最後每個社群還可邀請兩個學生前往位於加州的google總部參觀，&lt;p&gt;
 
-&lt;h2&gt;任務說明&lt;/h2&gt;
+## 任務說明
+&amp;gt;### Objective
 
-&lt;blockquote&gt;&lt;h3&gt;Objective&lt;/h3&gt;
+&amp;gt;Github pages allows hosting of websites. Host a Jekyll website / blog using github pages and add a relevant blog entry about your participation at GCI with FOSSASIA.
 
-&lt;p&gt;Github pages allows hosting of websites. Host a Jekyll website / blog using github pages and add a relevant blog entry about your participation at GCI with FOSSASIA.&lt;/p&gt;
+&amp;gt;###Requirements
 
-&lt;h3&gt;Requirements&lt;/h3&gt;
+&amp;gt;Create the website using github pages and jekyll and post some interested facts about you, your participation at GCI with FOSSASIA and your ideas and add some images. Tweet about it when you are finished.
 
-&lt;p&gt;Create the website using github pages and jekyll and post some interested facts about you, your participation at GCI with FOSSASIA and your ideas and add some images. Tweet about it when you are finished.&lt;/p&gt;
+&amp;gt;###Expected Outcome
 
-&lt;h3&gt;Expected Outcome&lt;/h3&gt;
+&amp;gt;*	understanding Github pages and Jekyll
+*	Jekyll website as github pages
+*	site with a link to FOSSASIA (http://fossasia.org)
+*	blog post about your experience with an image
+*	link to tweet, e.g. &quot;Set up a #Jekyll blog at #GCI with #FOSSASIA http://my-jekyll-blo-site @fossasia @hpdang&quot;
 
-&lt;ul&gt;
-&lt;li&gt;understanding Github pages and Jekyll&lt;/li&gt;
-&lt;li&gt;Jekyll website as github pages&lt;/li&gt;
-&lt;li&gt;site with a link to FOSSASIA (http://fossasia.org)&lt;/li&gt;
-&lt;li&gt;blog post about your experience with an image&lt;/li&gt;
-&lt;li&gt;link to tweet, e.g. &quot;Set up a #Jekyll blog at #GCI with #FOSSASIA http://my-jekyll-blo-site @fossasia @hpdang&quot;&lt;/li&gt;
-&lt;/ul&gt;
+&amp;gt;###Links
 
+&amp;gt;*	Jekyll - https://jekyllrb.com/
+*	Github - http://pages.github.com/
 
-&lt;h3&gt;Links&lt;/h3&gt;
+翻成中文應該是要我用[Jekyll](https://jekyllrb.com/) 在[Github Pages](http://pages.github.com/) 上架設一個blog，並且分享到twitter，但是我沒有twitter，幸好mentors同意讓我po在fb上。
 
-&lt;ul&gt;
-&lt;li&gt;Jekyll - https://jekyllrb.com/&lt;/li&gt;
-&lt;li&gt;Github - http://pages.github.com/&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;翻成中文應該是要我用&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 在&lt;a href=&quot;http://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; 上架設一個blog，並且分享到twitter，但是我沒有twitter，幸好mentors同意讓我po在fb上。&lt;/p&gt;
-
-&lt;p&gt;而這個blog就是我的成果，做的不是很精美，但是該有的功能都有了，額外的功能就等我有時間再加上去吧。&lt;/p&gt;
+而這個blog就是我的成果，做的不是很精美，但是該有的功能都有了，額外的功能就等我有時間再加上去吧。
+&lt;/p&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 27 Dec 2015 00:00:00 +0800</pubDate>
 				<link>/2015/12/27/second-task-GCI.html</link>
@@ -49,37 +59,36 @@
 		
 			<item>
 				<title>在google code-in 的第一個task</title>
-        <description>&lt;p&gt;&lt;p class=&quot;lead&quot;&gt;Google Code-in是一個由google舉辦給13到17歲學生的比賽，由許多像是&lt;a href=&quot;http://fossasia.org&quot;&gt;FOSSASIA&lt;/a&gt;的open source社群出任務，完成一個任務就可以獲得一張電子證書，3個任務可獲得一件google的T-shirt，最後每個社群還可邀請兩個學生前往位於加州的google總部參觀，&lt;p&gt;&lt;/p&gt;
+        <description>&lt;p class=&quot;lead&quot;&gt;Google Code-in是一個由google舉辦給13到17歲學生的比賽，由許多像是[FOSSASIA](http://fossasia.org)的open source社群出任務，完成一個任務就可以獲得一張電子證書，3個任務可獲得一件google的T-shirt，最後每個社群還可邀請兩個學生前往位於加州的google總部參觀，&lt;p&gt;
 
-&lt;h2&gt;任務說明&lt;/h2&gt;
+## 任務說明
+&amp;gt;See https://phabricator.wikimedia.org/T119450
 
-&lt;blockquote&gt;&lt;p&gt;See https://phabricator.wikimedia.org/T119450&lt;/p&gt;
-
-&lt;p&gt;Go to https://transparency.wikimedia.org/content.html
+&amp;gt;Go to https://transparency.wikimedia.org/content.html
 Scroll down to “Which Wikimedia projects were targeted?” (why don&#39;t headers there have an id?)
 Select &quot;All&quot;
 The third bar is «Not a WMF site» with 4 requests.
 The last bar is «Not a WMF site» with 1 request.
-Expected: «Not a WMF site» would appear only once, with 5 requests.&lt;/p&gt;
+Expected: «Not a WMF site» would appear only once, with 5 requests.
 
-&lt;p&gt;The codebase is under https://gerrit.wikimedia.org/r/#/admin/projects/wikimedia/TransparencyReport - you are expected to check out the codebase and provide a patch in Wikimedia Gerrit to fix this issue.&lt;/p&gt;&lt;/blockquote&gt;
+&amp;gt;The codebase is under https://gerrit.wikimedia.org/r/#/admin/projects/wikimedia/TransparencyReport - you are expected to check out the codebase and provide a patch in Wikimedia Gerrit to fix this issue.
 
-&lt;h2&gt;過程&lt;/h2&gt;
+##過程
 
-&lt;p&gt;翻成中文就是要我在&lt;a href=&quot;https://transparency.wikimedia.org/content.html&quot;&gt;這個&lt;/a&gt; 網站下面的統計中，合併兩個相同的選項，對於一個寫出這麼漂亮網站的人來說，不可能犯這種小錯誤，所以一定是故意給GCI學生的bug，所以我就二話不說給他cliam了。&lt;/p&gt;
+翻成中文就是要我在[這個](https://transparency.wikimedia.org/content.html) 網站下面的統計中，合併兩個相同的選項，對於一個寫出這麼漂亮網站的人來說，不可能犯這種小錯誤，所以一定是故意給GCI學生的bug，所以我就二話不說給他cliam了。
 
-&lt;p&gt;結果只是他統計資料中數據的英文字母大小寫不一樣而導致程式判定成兩個不同的選項而已。&lt;/p&gt;
+結果只是他統計資料中數據的英文字母大小寫不一樣而導致程式判定成兩個不同的選項而已。
 
-&lt;h2&gt;成果&lt;/h2&gt;
+##成果
+我上傳在gerrit上的patch
+&lt;img src=&quot;http://screenshot.net/847dzcp.jpg&quot; /&gt;
 
-&lt;p&gt;我上傳在gerrit上的patch
-&lt;img src=&quot;http://screenshot.net/847dzcp.jpg&quot;&gt;&lt;/p&gt;
+##總結
 
-&lt;h2&gt;總結&lt;/h2&gt;
+在找bug的過程中，我也順便了解了[d3.v3.min.js](https://gist.github.com/grantmichaels/5237322) 和[jquery.js](https://jquery.com/download/) 這兩個javascript函式庫的一小部份，之後又花了更多時間學怎麼用[Gerrit](https://gerrit.wikimedia.org)，Gerrit比較少人用，大部分的教學都只有英文，對於一個英文不好的高中生來說，要學會真的有點困難，幸好當時段考剛好考完有充份的時間去閱讀，另外我用菜英文問的問題，mentors都很有耐心的幫我找解決辦法，現在回去看當時的流言，我都覺得很丟臉。
 
-&lt;p&gt;在找bug的過程中，我也順便了解了&lt;a href=&quot;https://gist.github.com/grantmichaels/5237322&quot;&gt;d3.v3.min.js&lt;/a&gt; 和&lt;a href=&quot;https://jquery.com/download/&quot;&gt;jquery.js&lt;/a&gt; 這兩個javascript函式庫的一小部份，之後又花了更多時間學怎麼用&lt;a href=&quot;https://gerrit.wikimedia.org&quot;&gt;Gerrit&lt;/a&gt;，Gerrit比較少人用，大部分的教學都只有英文，對於一個英文不好的高中生來說，要學會真的有點困難，幸好當時段考剛好考完有充份的時間去閱讀，另外我用菜英文問的問題，mentors都很有耐心的幫我找解決辦法，現在回去看當時的流言，我都覺得很丟臉。&lt;/p&gt;
-
-&lt;p&gt;總而言之，我還是完成了我GCI的第一個task，太棒了！&lt;/p&gt;
+總而言之，我還是完成了我GCI的第一個task，太棒了！
+&lt;/p&gt;&lt;/p&gt;
 </description>
 				<pubDate>Tue, 01 Dec 2015 00:00:00 +0800</pubDate>
 				<link>/2015/12/01/first-task-GCI.html</link>
