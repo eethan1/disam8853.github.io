@@ -31,6 +31,7 @@
 			font-size: 200pt;
 		}
 		.time{font-size: 150pt;}
+		.btn{font-size: 32pt;}
 	</style>
 </head>
 <body>
@@ -59,7 +60,6 @@
 <div class="container-fluid">
 <table>
 	<tr>
-		<td rowspan="2"><h1>剩下時間：</h1></td>
 		<td><div id="timer1"><h1>45:00</h1></div></td>
 		<td><div id="timer2"><h1>15:00</h1></div></td>
 		<td><div id="timer3"><h1>10:00</h1></div></td>
@@ -188,7 +188,7 @@
 			element.innerHTML='<qq class="time">Time out!</qq>';
 		}
 		sec--;
-		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',10);
+		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',1000);
 	}
 	function CountDown1() {
 		Count(45,0,"timer1");
