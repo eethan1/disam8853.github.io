@@ -27,7 +27,8 @@
 	</style>
 </head>
 <body>
-<form name="scoreboard" id="scoreboard"></form>
+<div class="container-fluid">
+<form name="scoreboard" id="scoreboard">
 	<table class="table table-hover table-striped">
 	<thead class="thead-default">
 		<tr>
@@ -68,11 +69,25 @@
 			<td><input type="text" name="group5" id="3-5" class="form-control"></td>
 			<td><input type="text" name="group6" id="3-6" class="form-control"></td>
 		</tr>
+		<tr id="b">
+			<th scope="row">Rank</th>
+			<td class="rank"></td>
+			<td class="rank"></td>
+			<td class="rank"></td>
+			<td class="rank"></td>
+			<td class="rank"></td>
+			<td class="rank"></td>
+		</tr>
 		<tr>
 			<td colspan="7"><input type="button" name="submit" value="Submit" onclick="FormData()" class="btn btn-primary btn-lg"></td>
 		</tr>
 		</tbody>
-	</table>
+	</table></form>
+</div>
+
+<div class="container-fluid">
+
+</div>
 
 	<script>
 		function FormData() {
@@ -93,7 +108,7 @@
 			for(var i=5;i>=0;i--){
 				for(var t=5;t>=0;t--){
 				if(rank[t]==score[i]){
-					alert("NO."+(t+1)+" is Group "+(i+1));
+					document.getElementsByClassName('rank')[i].innerHTML="NO."+(t+1);
 					break;
 				}
 			}}
