@@ -28,8 +28,25 @@
 </head>
 <body>
 <div class="container-fluid">
+<table>
+	<tr>
+		<td><div id="timer1"><h1>45:00</h1></div></td>
+		<td><div id="timer2"><h1>15:00</h1></div></td>
+		<td><div id="timer3"><h1>10:00</h1></div></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><button onclick="CountDown1()" class="btn btn-lg">Start</button></td>
+		<td><button onclick="CountDown2()" class="btn btn-lg">Start</button></td>
+		<td><button onclick="CountDown3()" class="btn btn-lg">Start</button></td>
+		<td></td>
+	</tr>
+</table>
+</div>
+
+<div class="container-fluid">
 <form name="scoreboard" id="scoreboard">
-	<table class="table table-hover table-striped">
+	<table class="table table-hover">
 	<thead class="thead-default">
 		<tr>
 			<th scope="col"></th>
@@ -93,45 +110,64 @@
 		</tbody>
 	</table></form>
 </div>
-
-<div class="container-fluid">
-
-</div>
-
-	<script>
-		function FormData() {
-			var input=document.getElementsByTagName('input');
-			var score=Array(6);
-			var total=0;
-			for (var i=0;i<6;i++){
-				total=0;
-				for(var t=i;t<18;t=t+6){
-					total=total+parseInt(input[t].value);
-				}
-				score[i]=total;
+<script>
+	function FormData() {
+		var input=document.getElementsByTagName('input');
+		var score=Array(6);
+		var total=0;
+		for (var i=0;i<6;i++){
+			total=0;
+			for(var t=i;t<18;t=t+6){
+				total=total+parseInt(input[t].value);
 			}
-			console.log(score);
-			var rank=Array(6);
-			rank=score.concat();
-			rank.sort(function(a,b){return b-a});
-			for(var i=5;i>=0;i--){
-				for(var t=5;t>=0;t--){
-				if(rank[t]==score[i]){
-					document.getElementsByClassName('rank')[i].innerHTML="NO."+(t+1);
-					if(t==0){
-						document.getElementsByClassName('rank')[i].style.color="gold";
-					}
-					if(t==1){
-						document.getElementsByClassName('rank')[i].style.color="orange";
-					}
-					if(t==2){
-						document.getElementsByClassName('rank')[i].style.color="silver";
-					}
-					document.getElementsByClassName('score')[i].innerHTML=score[i];
-					break;
-				}
-			}}
+			score[i]=total;
 		}
-	</script>
+		console.log(score);
+		var rank=Array(6);
+		rank=score.concat();
+		rank.sort(function(a,b){return b-a});
+		for(var i=5;i>=0;i--){
+			for(var t=5;t>=0;t--){
+		document.getElementsByClassName('rank')[i].style.color="black";
+			if(rank[t]==score[i]){
+				document.getElementsByClassName('rank')[i].innerHTML="NO."+(t+1);
+				if(t==0){
+				document.getElementsByClassName('rank')[i].style.color="gold";
+				}
+				if(t==1){
+					document.getElementsByClassName('rank')[i].style.color="orange";
+				}
+				if(t==2){
+					document.getElementsByClassName('rank')[i].style.color="silver";
+				}
+				document.getElementsByClassName('score')[i].innerHTML=score[i];
+				break;
+			}
+		}}
+	}
+	function Count(min,sec,elem){
+		var element=document.getElementById(elem);
+		element.innerHTML="<h1>"+min+":"+sec+"</h1>";
+		if(sec<1 && min>=1){
+			min=min-1;
+			sec=sec+60;
+		}
+		if(sec<1 && min<1){
+			clearTimeout(timer);
+			element.innerHTML='<h2>Time out!</h2>';
+		}
+		sec--;
+		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',1000);
+	}
+	function CountDown1() {
+		Count(45,0,"timer1");
+	}
+	function CountDown2() {
+		Count(15,0,"timer2");
+	}
+	function CountDown3() {
+		Count(10,0,"timer3");
+	}
+</script>
 </body>
 </html>
