@@ -69,7 +69,16 @@
 			<td><input type="text" name="group5" id="3-5" class="form-control"></td>
 			<td><input type="text" name="group6" id="3-6" class="form-control"></td>
 		</tr>
-		<tr id="b">
+		<tr>
+			<th scope="row">Total</th>
+			<td class="score"></td>
+			<td class="score"></td>
+			<td class="score"></td>
+			<td class="score"></td>
+			<td class="score"></td>
+			<td class="score"></td>
+		</tr>
+		<tr>
 			<th scope="row">Rank</th>
 			<td class="rank"></td>
 			<td class="rank"></td>
@@ -109,6 +118,16 @@
 				for(var t=5;t>=0;t--){
 				if(rank[t]==score[i]){
 					document.getElementsByClassName('rank')[i].innerHTML="NO."+(t+1);
+					if(t==0){
+						document.getElementsByClassName('rank')[i].style.color="gold";
+					}
+					if(t==1){
+						document.getElementsByClassName('rank')[i].style.color="orange";
+					}
+					if(t==2){
+						document.getElementsByClassName('rank')[i].style.color="silver";
+					}
+					document.getElementsByClassName('score')[i].innerHTML=score[i];
 					break;
 				}
 			}}
