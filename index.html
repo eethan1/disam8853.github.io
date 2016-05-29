@@ -133,7 +133,7 @@
 			<td class="rank"></td>
 		</tr>
 		<tr>
-			<td colspan="7"><input type="button" name="submit" value="Submit" onclick="FormData()" class="btn btn-primary btn-lg"></td>
+			<td colspan="7"><input type="button" name="submit" value="計算成績" onclick="FormData()" class="btn btn-primary btn-lg"></td>
 		</tr>
 		</tbody>
 	</table></form>
@@ -178,7 +178,10 @@
 	}
 	function Count(min,sec,elem){
 		var element=document.getElementById(elem);
-		element.innerHTML=min+":"+sec;
+		if(sec<10){
+			element.innerHTML=min+":0"+sec;
+		}
+		else{element.innerHTML=min+":"+sec;}
 		if(sec<1 && min>=1){
 			min--;
 			sec=sec+60;
@@ -188,7 +191,7 @@
 			element.innerHTML='<qq class="time">Time out!</qq>';
 		}
 		sec--;
-		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',1000);
+		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',100);
 	}
 	function CountDown1() {
 		Count(45,0,"timer1");
