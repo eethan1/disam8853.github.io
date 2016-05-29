@@ -6,6 +6,12 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<title>探險活寶計分版</title>
 	<style>
+		#up{
+			background-color: #64C4FF;
+		}
+		#down{
+			background-color: #FFFF33;
+		}
 		table,form{
 			width: 100%;
 			height: 100vh;
@@ -57,12 +63,12 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" id="up">
 <table>
 	<tr>
-		<td><div id="timer1"><h1>45:00</h1></div></td>
-		<td><div id="timer2"><h1>15:00</h1></div></td>
-		<td><div id="timer3"><h1>10:00</h1></div></td>
+		<td><h1>45:00</h1></td>
+		<td><h1>15:00</h1></td>
+		<td><h1>10:00</h1></td>
 	</tr>
 	<tr>
 		<td><button onclick="CountDown1()" class="btn btn-primary" data-toggle="modal" data-target=".modal1">開始計時！</button></td>
@@ -72,7 +78,7 @@
 </table>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" id="down">
 <form name="scoreboard" id="scoreboard">
 	<table class="table table-hover">
 	<thead class="thead-default">
@@ -160,17 +166,22 @@
 			for(var t=5;t>=0;t--){
 			var ranka=document.getElementsByClassName('rank');
 			if(rank[t]==score[i]){
-				ranka[i].innerHTML="NO."+(t+1);
 				if(t==0){
 					ranka[i].style.color="gold";
+					ranka[i].innerHTML="<b>冠軍</b>";
 				}
 				else if(t==1){
 					ranka[i].style.color="orange";
+					ranka[i].innerHTML="<b>亞軍</b>";
 				}
 				else if(t==2){
 					ranka[i].style.color="silver";
+					ranka[i].innerHTML="<b>殿軍</b>";
 				}
-				else{ranka[i].style.color="black";}
+				else{
+					ranka[i].style.color="black";
+					ranka[i].innerHTML="NO."+(t+1);
+				}
 				document.getElementsByClassName('score')[i].innerHTML=score[i];
 				break;
 			}
@@ -191,7 +202,7 @@
 			element.innerHTML='<qq class="time">Time out!</qq>';
 		}
 		sec--;
-		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',100);
+		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',1000);
 	}
 	function CountDown1() {
 		Count(45,0,"timer1");
