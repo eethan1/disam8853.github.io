@@ -44,21 +44,7 @@
 <div class="modal fade modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div id="timer1">45:00</div>
-    </div>
-  </div>
-</div>
-<div class="modal fade modal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div id="timer2">15:00</div>
-    </div>
-  </div>
-</div>
-<div class="modal fade modal3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div id="timer3">10:00</div>
+      <div id="timer"></div>
     </div>
   </div>
 </div>
@@ -66,14 +52,10 @@
 <div class="container-fluid" id="up">
 <table>
 	<tr>
-		<td><h1>45:00</h1></td>
-		<td><h1>15:00</h1></td>
-		<td><h1>10:00</h1></td>
+		<td><h1>倒數<input type="text" id="inmin">分鐘</h1></td>
 	</tr>
 	<tr>
-		<td><button onclick="CountDown1()" class="btn btn-primary" data-toggle="modal" data-target=".modal1">開始計時！</button></td>
-		<td><button onclick="CountDown2()" class="btn btn-primary" data-toggle="modal" data-target=".modal2">開始計時！</button></td>
-		<td><button onclick="CountDown3()" class="btn btn-primary" data-toggle="modal" data-target=".modal3">開始計時！</button></td>
+		<td><input type="button" value="開始計時" class="btn btn-primary" data-toggle="modal" data-target=".modal1" onclick="startcount()"></td>
 	</tr>
 </table>
 </div>
@@ -204,16 +186,11 @@
 			element.innerHTML='<qq class="time">Time out!</qq>';
 		}
 		sec--;
-		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',1000);
+		var timer=setTimeout('Count('+min+','+sec+',"'+elem+'")',10);
 	}
-	function CountDown1() {
-		Count(45,0,"timer1");
-	}
-	function CountDown2() {
-		Count(15,0,"timer2");
-	}
-	function CountDown3() {
-		Count(10,0,"timer3");
+	function startcount(){
+		var min=document.getElementById("inmin").value;
+		Count(min,0,"timer");
 	}
 </script>
 </body>
