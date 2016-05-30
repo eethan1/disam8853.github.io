@@ -9,10 +9,7 @@
 		#up{
 			background-color: #64C4FF;
 		}
-		#down{
-			background-color: #FFFF33;
-		}
-		table,form{
+		table{
 			width: 100%;
 			height: 100vh;
 		}
@@ -37,14 +34,21 @@
 			font-size: 200pt;
 		}
 		.time{font-size: 150pt;}
-		.btn{font-size: 32pt;}
+		.btn{
+			font-size: 32pt;
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
 <div class="modal fade modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div id="timer"></div>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" onclick="window.location.reload();">X</span></button>
+        <h4 class="modal-title" id="myModalLabel">倒數計時器</h4>
+      </div>
+        <div id="timer"></div>
     </div>
   </div>
 </div>
@@ -57,120 +61,17 @@
 	<tr>
 		<td><input type="button" value="開始計時" class="btn btn-primary" data-toggle="modal" data-target=".modal1" onclick="startcount()"></td>
 	</tr>
+	<tr>
+		<td><a href="scoreboard.html" class="btn btn-default btn-lg active" role="button">計分版</a></td>
+	</tr>
 </table>
 </div>
 
-<div class="container-fluid" id="down">
-<form name="scoreboard" id="scoreboard">
-	<table class="table table-hover">
-	<thead class="thead-default">
-		<tr>
-			<th scope="col"></th>
-			<th scope="col">Group 1</th>
-			<th scope="col">Group 2</th>
-			<th scope="col">Group 3</th>
-			<th scope="col">Group 4</th>
-			<th scope="col">Group 5</th>
-			<th scope="col">Group 6</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">第1關</th>
-			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()""></td>
-		</tr>
-		<tr>
-			<th scope="row">第2關</th>
-			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()""></td>
-		</tr>
-		<tr>
-			<th scope="row">第3關</th>
-			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()""></td>
-			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()""></td>
-		</tr>
-		<tr>
-			<th scope="row">總分</th>
-			<td class="score"></td>
-			<td class="score"></td>
-			<td class="score"></td>
-			<td class="score"></td>
-			<td class="score"></td>
-			<td class="score"></td>
-		</tr>
-		<tr>
-			<th scope="row">排名</th>
-			<td class="rank"></td>
-			<td class="rank"></td>
-			<td class="rank"></td>
-			<td class="rank"></td>
-			<td class="rank"></td>
-			<td class="rank"></td>
-		</tr>
-		</tbody>
-	</table></form>
-</div>
+
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-	function FormData() {
-		var input=document.getElementsByClassName('sc');
-		var score=Array(6);
-		var total=0;
-		for (var i=0;i<6;i++){
-			total=0;
-			for(var t=i;t<18;t=t+6){
-				if(input[t].value==false){
-					continue;
-				}
-				else{
-					total=total+parseInt(input[t].value);
-				}
-			}
-			score[i]=total;
-		}
-		console.log(score);
-		var rank=Array(6);
-		rank=score.concat();
-		rank.sort(function(a,b){return b-a});
-		for(var i=0;i<6;i++){
-			for(var t=0;t<6;t++){
-			var ranka=document.getElementsByClassName('rank');
-			if(rank[t]==score[i]){
-				if(t==0){
-					ranka[i].style.color="gold";
-					ranka[i].innerHTML="<b>冠軍</b>";
-				}
-				else if(t==1){
-					ranka[i].style.color="orange";
-					ranka[i].innerHTML="<b>亞軍</b>";
-				}
-				else if(t==2){
-					ranka[i].style.color="silver";
-					ranka[i].innerHTML="<b>殿軍</b>";
-				}
-				else{
-					ranka[i].style.color="black";
-					ranka[i].innerHTML="NO."+(t+1);
-				}
-				document.getElementsByClassName('score')[i].innerHTML=score[i];
-				break;
-			}
-		}}
-	}
+	var timer;
 	function Count(min,sec,elem){
 		var element=document.getElementById(elem);
 		if(sec<10){
