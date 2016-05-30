@@ -95,30 +95,30 @@
 	<tbody>
 		<tr>
 			<th scope="row">第1關</th>
-			<td><input type="text" name="group1" class="form-control"></td>
-			<td><input type="text" name="group2" class="form-control"></td>
-			<td><input type="text" name="group3" class="form-control"></td>
-			<td><input type="text" name="group4" class="form-control"></td>
-			<td><input type="text" name="group5" class="form-control"></td>
-			<td><input type="text" name="group6" class="form-control"></td>
+			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()"></td>
+			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()""></td>
 		</tr>
 		<tr>
 			<th scope="row">第2關</th>
-			<td><input type="text" name="group1" class="form-control"></td>
-			<td><input type="text" name="group2" class="form-control"></td>
-			<td><input type="text" name="group3" class="form-control"></td>
-			<td><input type="text" name="group4" class="form-control"></td>
-			<td><input type="text" name="group5" class="form-control"></td>
-			<td><input type="text" name="group6" class="form-control"></td>
+			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()""></td>
 		</tr>
 		<tr>
 			<th scope="row">第3關</th>
-			<td><input type="text" name="group1" class="form-control"></td>
-			<td><input type="text" name="group2" class="form-control"></td>
-			<td><input type="text" name="group3" class="form-control"></td>
-			<td><input type="text" name="group4" class="form-control"></td>
-			<td><input type="text" name="group5" class="form-control"></td>
-			<td><input type="text" name="group6" class="form-control"></td>
+			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()""></td>
+			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()""></td>
 		</tr>
 		<tr>
 			<th scope="row">總分</th>
@@ -138,9 +138,6 @@
 			<td class="rank"></td>
 			<td class="rank"></td>
 		</tr>
-		<tr>
-			<td colspan="7"><input type="button" name="submit" value="計算成績" onclick="FormData()" class="btn btn-primary btn-lg"></td>
-		</tr>
 		</tbody>
 	</table></form>
 </div>
@@ -148,13 +145,18 @@
 <script src="js/bootstrap.min.js"></script>
 <script>
 	function FormData() {
-		var input=document.getElementsByTagName('input');
+		var input=document.getElementsByClassName('sc');
 		var score=Array(6);
 		var total=0;
 		for (var i=0;i<6;i++){
 			total=0;
 			for(var t=i;t<18;t=t+6){
-				total=total+parseInt(input[t].value);
+				if(input[t].value==false){
+					break;
+				}
+				else{
+					total=total+parseInt(input[t].value);
+				}
 			}
 			score[i]=total;
 		}
