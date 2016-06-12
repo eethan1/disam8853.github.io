@@ -5,85 +5,81 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<title>探險活寶計分版</title>
 	<style>
-		#down{
+		html,body{
 			background-color: #FFFF33;
+			width: 100%;		
 		}
-		table,form{
+		table{
 			width: 100%;
 			height: 100vh;
 		}
 		table,td,th{
-			white-space:nowrap;
 			font-size: 150%;
-			text-align: center;
-		}
-		input{
 			text-align: center;
 		}
 		.form-control{
 			font-size: 100%;
 			height: 100%;
+			text-align: center;
 		}
 		input[type=text]:focus {
  			border: 2px solid #555;
 		}
-		.btn{font-size: 32pt;}
 	</style>
 </head>
 <body>
-<div class="container-fluid" id="down">
-<form name="scoreboard" id="scoreboard">
-	<table class="table table-hover">
-	<thead class="thead-default">
+
+<table class="table table-hover">
+	<thead>
 		<tr>
-			<th scope="col"></th>
-			<th scope="col">Group 1</th>
-			<th scope="col">Group 2</th>
-			<th scope="col">Group 3</th>
-			<th scope="col">Group 4</th>
-			<th scope="col">Group 5</th>
-			<th scope="col">Group 6</th>
+			<th></th>
+			<th>Group 1</th>
+			<th>Group 2</th>
+			<th>Group 3</th>
+			<th>Group 4</th>
+			<th>Group 5</th>
+			<th>Group 6</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<th scope="row">第1關</th>
-			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()"></td>
+			<th>Challenge 1</th>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
 		</tr>
 		<tr>
-			<th scope="row">第2關</th>
-			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()"></td>
+			<th>Challenge 2</th>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
 		</tr>
 		<tr>
-			<th scope="row">第3關</th>
-			<td><input type="text" name="group1" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group2" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group3" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group4" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group5" class="form-control sc" onkeyup="FormData()"></td>
-			<td><input type="text" name="group6" class="form-control sc" onkeyup="FormData()"></td>
+			<th>Challenge 3</th>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
+			<td><input type="text" class="form-control" onkeyup="calculate()"></td>
 		</tr>
 		<tr>
-			<th scope="row">總分</th>
-			<td class="score"></td>
-			<td class="score"></td>
-			<td class="score"></td>
-			<td class="score"></td>
-			<td class="score"></td>
-			<td class="score"></td>
+			<th>Total</th>
+			<td class="total"></td>
+			<td class="total"></td>
+			<td class="total"></td>
+			<td class="total"></td>
+			<td class="total"></td>
+			<td class="total"></td>
 		</tr>
 		<tr>
-			<th scope="row">排名</th>
+			<th>Rank</th>
 			<td class="rank"></td>
 			<td class="rank"></td>
 			<td class="rank"></td>
@@ -91,15 +87,14 @@
 			<td class="rank"></td>
 			<td class="rank"></td>
 		</tr>
-		</tbody>
-	</table></form>
-</div>
+	</tbody>
+</table>
 
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-	function FormData() {
-		var input=document.getElementsByClassName('sc');
+	function calculate() {
+		var input=document.getElementsByTagName('input');
 		var score=Array(6);
 		var total=0;
 		for (var i=0;i<6;i++){
@@ -138,7 +133,7 @@
 					ranka[i].style.color="black";
 					ranka[i].innerHTML="NO."+(t+1);
 				}
-				document.getElementsByClassName('score')[i].innerHTML=score[i];
+				document.getElementsByClassName('total')[i].innerHTML=score[i];
 				break;
 			}
 		}}
