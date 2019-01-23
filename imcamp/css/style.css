@@ -14,7 +14,7 @@ body {
 
     /*margin-top: -16vh;*/
     /*margin-left: -15vmin;*/
-    top: calc(50vh - 16vh);
+    top: calc(50vh - 14.28vmin);
     left: calc(50vw - 15vmin);
 }
 
@@ -24,7 +24,7 @@ body {
 
     /*margin-top: -16vh;
 	margin-left: -15vmin;*/
-    top: calc(50vh - 8vmin);
+    top: calc(50vh - 7.3vmin);
     left: calc(50vw - 7.5vmin);
 
     /* Chrome, Safari 5 */
