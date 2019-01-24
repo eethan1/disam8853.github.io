@@ -74,7 +74,7 @@ var Typer = {
 
             Typer.index += Typer.speed; // add to the index the speed
 
-            var text = "~/ntu_im_camp:/$ " + $("<div/>").text(Typer.text.substring(0, Typer.index)).html(); // parse the text for stripping html entities
+            var text = "ntu_im_camp:/$ " + $("<div/>").text(Typer.text.substring(0, Typer.index)).html(); // parse the text for stripping html entities
             var rtn = new RegExp("\n", "g"); // newline regex
             var rts = new RegExp("\\s", "g"); // whitespace regex
             var rtt = new RegExp("\\t", "g"); // tab regex
