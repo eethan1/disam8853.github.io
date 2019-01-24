@@ -3,15 +3,15 @@
  *This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 License
  */
 
-$(
-    function() {
-        $(document).keydown(
-            function(event) {
-                Typer.addText(event); //Capture the keydown event and call the addText, this is executed on page load
-            }
-        );
-    }
-);
+// $(
+//     function() {
+//         $(document).keydown(
+//             function(event) {
+//                 Typer.addText(event); //Capture the keydown event and call the addText, this is executed on page load
+//             }
+//         );
+//     }
+// );
 
 var Typer = {
     text: null,
@@ -45,7 +45,7 @@ var Typer = {
             Typer.index += Typer.speed; // add to the index the speed
         } else {
             if (Typer.index > 0) // else if index is not less than 0
-                Typer.index -= Typer.speed; //	remove speed for deleting text
+                Typer.index -= Typer.speed; //  remove speed for deleting text
         }
         var text = $("<div/>").text(Typer.text.substring(0, Typer.index)).html(); // parse the text for stripping html entities
         var rtn = new RegExp("\n", "g"); // newline regex
@@ -62,6 +62,27 @@ var Typer = {
         }
     },
 
+    autoAddText: function(interval) {
+        var cont = Typer.content(); // get the console content
+        if (cont.substring(cont.length - 1, cont.length) === "|") // if the last char is the blinking cursor
+            $("#console").html($("#console").html().substring(0, cont.length - 1)); // remove it before adding the text
+
+        if (Typer.index <= Typer.text.length) {
+            if (interval >= 150)
+                interval -= 50;
+            setTimeout(function() { Typer.autoAddText(interval); }, interval);
+
+            Typer.index += Typer.speed; // add to the index the speed
+
+            var text = "~/ntu_im_camp:/$ " + $("<div/>").text(Typer.text.substring(0, Typer.index)).html(); // parse the text for stripping html entities
+            var rtn = new RegExp("\n", "g"); // newline regex
+            var rts = new RegExp("\\s", "g"); // whitespace regex
+            var rtt = new RegExp("\\t", "g"); // tab regex
+            $("#console").html(text.replace(rtn, "<br/>").replace(rtt, "&nbsp;&nbsp;&nbsp;&nbsp;").replace(rts, "&nbsp;")); // replace newline chars with br, tabs with 4 space and blanks with an html blank
+            window.scrollBy(0, 50); // scroll to make sure bottom is always visible
+        }
+    },
+
     updLstChr: function() { // blinking cursor
         var console = $("#console")
         var cont = this.content(); // get console
@@ -72,16 +93,6 @@ var Typer = {
     }
 }
 
-var kernel = "\
-#include <iostream>\n\
-using namespace std;\n\
-\n\
-int main(){\n\
-    cout << \"WELCOME TO NTU IM!!!\";\n\
-    return 0;\n\
-}\n\
-\
-\
-"
+var kernel = "welcome to NTU IM !!!"
 
 Typer.init();
