@@ -3,6 +3,7 @@ body {
 }
 
 #console {
+	display: none;
     color: #00FF00;
     font-family: monospace;
 
@@ -10,8 +11,17 @@ body {
     width: 60vw;
 
     margin-left: 20vw;
-
     padding-top: calc(50vh + 50vmin);
+}
+
+@keyframes console_top {
+    from {
+        padding-top: calc(50vh + 50vmin);
+    }
+
+    to {
+        padding-top: 50vh;
+    }
 }
 
 input[type="text"] {
@@ -60,9 +70,7 @@ input[type="text"]:focus {
     animation: myOrbit 5s linear infinite;
 }
 
-#logo-github {
-
-}
+#logo-github {}
 
 #logo-fb {
     animation-delay: -1s;

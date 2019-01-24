@@ -18,7 +18,7 @@ $(function() {
 			$("#cli").val("");
 
 			if (command == "NTUIM") {
-
+				$("#cli").val("welcome to NTUIM!");
 			}
 		}
 	});

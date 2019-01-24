@@ -11,6 +11,8 @@ function shrink() {
 	$("#logo-youtube").css("animation", "logo_enlarge 2s ease-in forwards");
 	setTimeout(function(){
 		$("#sun").css("animation", "sun_shrink 4s linear forwards");
+		$("#console").css("animation", "console_top 4s linear forwards")
+					 .fadeIn("slow");
 		$("#logo-github").css("display", "none");
 		$("#logo-fb").css("display", "none");
 		$("#logo-google").css("display", "none");
