@@ -41,9 +41,9 @@ input[type="text"]:focus {
 }
 
 #symbol {
-    width: 100vw;
-    height: calc(100%);
-    position: relative;
+    /*width: 100vw;
+    min-height: 100vh;
+    position: relative;*/
 }
 
 #sun {
