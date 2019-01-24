@@ -19,6 +19,6 @@ function shrink() {
 		$("#logo-spotify").css("display", "none");
 		$("#logo-youtube").css("display", "none");
 
-		setTimeout(function(){Typer.autoAddText(800);}, 5000);
+		setTimeout(function(){Typer.autoAddText(100);}, 5000);
 	}, 6000);
 }
