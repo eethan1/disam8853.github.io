@@ -2,6 +2,34 @@ body {
     background-color: black;
 }
 
+#console {
+    color: #00FF00;
+    font-family: monospace;
+
+    height: 20vh;
+    width: 60vw;
+
+    margin-left: 20vw;
+
+    padding-top: calc(50vh + 50vmin);
+}
+
+input[type="text"] {
+    display: inline-block;
+    width: calc(60vw - 13em);
+    border: none;
+    background: black;
+    padding: 0 .5em;
+
+    color: #00FF00;
+    font-family: monospace;
+}
+
+input[type="text"]:focus {
+    background: black;
+    outline: none;
+}
+
 #symbol {
     width: 100vw;
     height: calc(100%);
@@ -16,6 +44,8 @@ body {
     /*margin-left: -15vmin;*/
     top: calc(50vh - 14.28vmin);
     left: calc(50vw - 15vmin);
+
+    /*animation: sun_enlarge 2s linear 2s forwards;*/
 }
 
 .logo {
@@ -27,60 +57,27 @@ body {
     top: calc(50vh - 7.3vmin);
     left: calc(50vw - 7.5vmin);
 
-    /* Chrome, Safari 5 */
-    -webkit-animation: myOrbit 5s linear infinite;
-    /* Firefox 5-15 */
-    -moz-animation: myOrbit 5s linear infinite;
-    /* Opera 12+ */
-    -o-animation: myOrbit 5s linear infinite;
-    /* Chrome, Firefox 16+, IE 10+, Safari 5 */
     animation: myOrbit 5s linear infinite;
 }
 
+#logo-github {
+
+}
+
 #logo-fb {
-	animation-delay: -1s;
+    animation-delay: -1s;
 }
 
 #logo-google {
-	animation-delay: -2s;
+    animation-delay: -2s;
 }
 
 #logo-spotify {
-	animation-delay: -3s;
+    animation-delay: -3s;
 }
 
 #logo-youtube {
-	animation-delay: -4s;
-}
-
-@-webkit-keyframes myOrbit {
-    from {
-        -webkit-transform: rotate(0deg) translateX(40vmin) rotate(0deg);
-    }
-
-    to {
-        -webkit-transform: rotate(360deg) translateX(40vmin) rotate(-360deg);
-    }
-}
-
-@-moz-keyframes myOrbit {
-    from {
-        -moz-transform: rotate(0deg) translateX(40vmin) rotate(0deg);
-    }
-
-    to {
-        -moz-transform: rotate(360deg) translateX(40vmin) rotate(-360deg);
-    }
-}
-
-@-o-keyframes myOrbit {
-    from {
-        -o-transform: rotate(0deg) translateX(40vmin) rotate(0deg);
-    }
-
-    to {
-        -o-transform: rotate(360deg) translateX(40vmin) rotate(-360deg);
-    }
+    animation-delay: -4s;
 }
 
 @keyframes myOrbit {
@@ -90,5 +87,35 @@ body {
 
     to {
         transform: rotate(360deg) translateX(40vmin) rotate(-360deg);
+    }
+}
+
+@keyframes sun_shrink {
+    from {
+        width: 30vmin;
+        top: calc(50vh - 14.28vmin);
+        left: calc(50vw - 15vmin);
+    }
+
+    to {
+        width: 20vmin;
+        top: 20vh;
+        left: calc(50vw - 10vmin);
+    }
+}
+
+@keyframes logo_enlarge {
+    from {
+        width: 15vmin;
+        top: calc(50vh - 7.3vmin);
+        left: calc(50vw - 7.5vmin);
+        transform: rotate(0deg) translateX(40vmin) rotate(0deg);
+    }
+
+    to {
+        width: 30vmin;
+        top: calc(50vh - 14.6vmin);
+        left: calc(50vw - 15vmin);
+        transform: rotate(360deg) translateX(calc(50vmax + 15vmin)) rotate(-360deg);
     }
 }
