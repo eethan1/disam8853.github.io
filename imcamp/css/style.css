@@ -12,6 +12,7 @@ body {
 
     margin-left: 20vw;
     padding-top: calc(50vh + 50vmin);
+    overflow-wrap: normal;
 }
 
 @keyframes console_top {
