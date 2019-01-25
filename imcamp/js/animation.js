@@ -1,4 +1,4 @@
-$(function() {
+$(window).load(function() {
     aniInit();
 
     setTimeout(function() { shrink() }, 5000);
@@ -11,7 +11,7 @@ function shrink() {
     setTimeout(function() { $("#logo-youtube").css("animation", "logo_enlarge 2s forwards"); }, 3000);
     $("#logo-google").css("animation", "logo_enlarge 2s forwards");
     setTimeout(function() { $("#logo-spotify").css("animation", "logo_enlarge 2s forwards"); }, 4000);
-    
+
     setTimeout(function() {
         $("#sun").css("animation", "sun_shrink 4s linear forwards");
         $("#console").css("animation", "console_top 4s linear forwards")
