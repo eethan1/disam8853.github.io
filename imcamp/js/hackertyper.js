@@ -74,11 +74,7 @@ var Typer = {
 
             Typer.index += Typer.speed; // add to the index the speed
 
-            var text = "ntu_im_camp:/$ " + $("<div/>").text(Typer.text.substring(0, Typer.index)).html(); // parse the text for stripping html entities
-            var rtn = new RegExp("\n", "g"); // newline regex
-            var rts = new RegExp("\\s", "g"); // whitespace regex
-            var rtt = new RegExp("\\t", "g"); // tab regex
-            $("#console").html(text.replace(rtn, "<br/>").replace(rtt, "&nbsp;&nbsp;&nbsp;&nbsp;").replace(rts, "&nbsp;")); // replace newline chars with br, tabs with 4 space and blanks with an html blank
+            $("#console").html("ntu_im_camp:/$ " + Typer.text.substring(0, Typer.index)); // replace newline chars with br, tabs with 4 space and blanks with an html blank
             window.scrollBy(0, 50); // scroll to make sure bottom is always visible
         }
     },

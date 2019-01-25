@@ -12,7 +12,6 @@ body {
 
     margin-left: 20vw;
     padding-top: calc(50vh + 50vmin);
-    word-wrap: break-word;
 }
 
 @keyframes console_top {
