@@ -4,7 +4,7 @@ body {
 }
 
 #console {
-	display: none;
+    display: none;
     color: #00FF00;
     font-family: monospace;
 
@@ -60,6 +60,7 @@ input[type="text"]:focus {
 }
 
 .logo {
+    display: none;
     position: absolute;
     width: 15vmin;
 
@@ -68,25 +69,67 @@ input[type="text"]:focus {
     top: calc(50vh - 7.3vmin);
     left: calc(50vw - 7.5vmin);
 
-    animation: myOrbit 5s linear infinite;
+    /*animation: myOrbit 5s linear infinite;*/
 }
 
 #logo-github {}
 
-#logo-fb {
-    animation-delay: -1s;
+#logo-fb {}
+
+#logo-google {}
+
+#logo-spotify {}
+
+#logo-youtube {}
+
+@keyframes github-init {
+    from {}
+
+    to {
+        transform: translateX(40vmin);
+    }
 }
 
-#logo-google {
-    animation-delay: -2s;
+@keyframes fb-init {
+    from {}
+
+    to {
+        transform: translate(calc(40vmin*0.30901699437), calc(40vmin*0.95105651629));
+    }
 }
 
-#logo-spotify {
-    animation-delay: -3s;
+@keyframes google-init {
+    from {}
+
+    to {
+        transform: translate(calc(40vmin * -0.80901699437), calc(40vmin * 0.58778525229));
+    }
 }
 
-#logo-youtube {
-    animation-delay: -4s;
+@keyframes spotify-init {
+    from {}
+
+    to {
+        transform: translate(calc(40vmin*-0.80901699437), calc(40vmin*-0.58778525229));
+    }
+}
+
+@keyframes youtube-init {
+    from {}
+
+    to {
+        transform: translate(calc(40vmin*0.30901699437), calc(40vmin*-0.95105651629));
+    }
+}
+
+@keyframes myOrbit {
+    from {
+        transform: rotate(0deg) translateX(40vmin) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(40vmin) rotate(-360deg);
+    }
 }
 
 @keyframes myOrbit {
