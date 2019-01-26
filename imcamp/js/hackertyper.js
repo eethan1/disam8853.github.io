@@ -62,19 +62,48 @@ var Typer = {
         }
     },
 
-    autoAddText: function(interval) {
+    autoAddText: function(interval, oriStr = "") {
         var cont = Typer.content(); // get the console content
         if (cont.substring(cont.length - 1, cont.length) === "|") // if the last char is the blinking cursor
             $("#console").html($("#console").html().substring(0, cont.length - 1)); // remove it before adding the text
 
         if (Typer.index <= Typer.text.length) {
-            if (interval >= 150)
+            if (interval > 100)
                 interval -= 50;
             setTimeout(function() { Typer.autoAddText(interval); }, interval);
 
             Typer.index += Typer.speed; // add to the index the speed
 
-            $("#console").html("ntu_im_camp:/$ " + Typer.text.substring(0, Typer.index)); // replace newline chars with br, tabs with 4 space and blanks with an html blank
+            var str = "";
+            if (oriStr != "")
+                str = oriStr + "<br/>ntu_im_camp:/$ " + Typer.text.substring(0, Typer.index);
+            else
+                str = "ntu_im_camp:/$ " + Typer.text.substring(0, Typer.index);
+
+            $("#console").html(str); // replace newline chars with br, tabs with 4 space and blanks with an html blank
+            window.scrollBy(0, 50); // scroll to make sure bottom is always visible
+        }
+    },
+    responseText: function(interval, oriStr = "") {
+        var cont = Typer.content(); // get the console content
+        if (cont.substring(cont.length - 1, cont.length) === "|") // if the last char is the blinking cursor
+            $("#console").html($("#console").html().substring(0, cont.length - 1)); // remove it before adding the text
+
+        if (Typer.index <= Typer.text.length) {
+            if (interval > 100)
+                interval -= 50;
+            setTimeout(function() { Typer.responseText(interval, oriStr); }, interval);
+
+            Typer.index += Typer.speed; // add to the index the speed
+
+            var str = "";
+            if (oriStr != "") {
+                if (oriStr.substring(oriStr.length - 1, oriStr.length) === "|") // if the last char is the blinking cursor
+                    oriStr = oriStr.substring(0, oriStr.length - 1); // remove it before adding the text
+                str = oriStr + Typer.text.substring(0, Typer.index);
+            } else
+                str = Typer.text.substring(0, Typer.index);
+            $("#console").html(str); // replace newline chars with br, tabs with 4 space and blanks with an html blank
             window.scrollBy(0, 50); // scroll to make sure bottom is always visible
         }
     },
@@ -89,6 +118,6 @@ var Typer = {
     }
 }
 
-var kernel = "welcome to NTU IM !!!"
+var kernel = "launch camp<br/>"
 
 Typer.init();

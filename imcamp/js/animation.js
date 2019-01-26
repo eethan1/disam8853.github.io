@@ -22,7 +22,19 @@ function shrink() {
         $("#logo-spotify").css("display", "none");
         $("#logo-youtube").css("display", "none");
 
-        setTimeout(function() { Typer.autoAddText(100); }, 5000);
+        setTimeout(function() {
+            Typer.autoAddText(100);
+            setTimeout(function() {
+                Typer.text = "Are you sure? [Y/N]: ";
+                Typer.index = 0;
+                Typer.responseText(100, oriStr = $("#console").html());
+                setTimeout(function() {
+                    Typer.text = "Y<br/><br/>Welcome to 2019 NTU IM CAMP !!!";
+                    Typer.index = 0;
+                    Typer.responseText(100, oriStr = $("#console").html());
+                }, 3000);
+            }, 1000);
+        }, 5000);
     }, 6000);
 }
 
