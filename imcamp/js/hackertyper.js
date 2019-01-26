@@ -80,6 +80,8 @@ var Typer = {
             else
                 str = "ntu_im_camp:/$ " + Typer.text.substring(0, Typer.index);
 
+            var x = new Audio('audio/typing.mp3');
+            x.play();
             $("#console").html(str); // replace newline chars with br, tabs with 4 space and blanks with an html blank
             window.scrollBy(0, 50); // scroll to make sure bottom is always visible
         }
