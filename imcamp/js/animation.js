@@ -1,4 +1,9 @@
 $(window).on('load', function() {
+	$("#skip-btn").hover(function(){
+		$("#skip-img").css("transform", "translate(5rem, -1.2rem)");
+	}, function(){
+		$("#skip-img").css("transform", "");
+	});
     aniInit();
 
     setTimeout(function() { shrink() }, 5000);

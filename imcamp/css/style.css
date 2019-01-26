@@ -3,6 +3,31 @@ body {
     min-height: 100vh;
 }
 
+/*skip button*/
+#nav {
+}
+
+#skip-img {
+	width: 4rem;
+	transform: translateY(0.2rem);
+	transition: transform 1s ;
+}
+
+#skip-btn {
+	background-color: rgba(0,0,0,1);
+	border: none;
+	color: white;
+	font-size: 1.5rem;
+	padding-top: 2rem;
+	padding-left: 3rem;
+	overflow: hidden;
+}
+
+#skip-btn:hover {
+
+}
+
+/*console*/
 #console {
     display: none;
     color: #00FF00;
@@ -11,17 +36,18 @@ body {
     width: 60vw;
 
     margin-left: 20vw;
-    padding-top: calc(50vh + 50vmin);
+    position: absolute;
+    top: calc(50vh + 50vmin);
     overflow-wrap: normal;
 }
 
 @keyframes console_top {
     from {
-        padding-top: calc(50vh + 50vmin);
+        top: calc(50vh + 50vmin);
     }
 
     to {
-        padding-top: 50vh;
+        top: 50vh;
     }
 }
 
@@ -51,8 +77,6 @@ input[type="text"]:focus {
     position: absolute;
     width: 30vmin;
 
-    /*margin-top: -16vh;*/
-    /*margin-left: -15vmin;*/
     top: calc(50vh - 14.28vmin);
     left: calc(50vw - 15vmin);
 
