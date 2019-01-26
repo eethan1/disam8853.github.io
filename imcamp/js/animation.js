@@ -1,12 +1,26 @@
-$(window).on('load', function() {
-	$("#skip-btn").hover(function(){
-		$("#skip-img").css("transform", "translate(5rem, -1.2rem)");
-	}, function(){
-		$("#skip-img").css("transform", "");
-	});
-    aniInit();
+var skip = false;
 
-    setTimeout(function() { shrink() }, 5000);
+$(function() {
+    $("#skip-btn").hover(function() {
+        $("#skip-img").css("transform", "translate(5rem, -1.2rem)");
+    }, function() {
+        $("#skip-img").css("transform", "");
+    });
+    $("#skip-btn").click(function() {
+        skipAni();
+        skip = true;
+    });
+});
+
+
+$(window).on('load', function() {
+    if (!skip)
+        aniInit();
+
+    setTimeout(function() {
+        if (!skip)
+            shrink()
+    }, 5000);
 
 });
 
@@ -18,28 +32,30 @@ function shrink() {
     setTimeout(function() { $("#logo-spotify").css("animation", "logo_enlarge 2s forwards"); }, 4000);
 
     setTimeout(function() {
-        $("#sun").css("animation", "sun_shrink 4s linear forwards");
-        $("#console").css("animation", "console_top 4s linear forwards")
-            .fadeIn(4000);
-        $("#logo-github").css("display", "none");
-        $("#logo-fb").css("display", "none");
-        $("#logo-google").css("display", "none");
-        $("#logo-spotify").css("display", "none");
-        $("#logo-youtube").css("display", "none");
+        if (!skip) {
+            $("#sun").css("animation", "sun_shrink 4s linear forwards");
+            $("#console").css("animation", "console_top 4s linear forwards")
+                .fadeIn(4000);
+            $("#logo-github").css("display", "none");
+            $("#logo-fb").css("display", "none");
+            $("#logo-google").css("display", "none");
+            $("#logo-spotify").css("display", "none");
+            $("#logo-youtube").css("display", "none");
 
-        setTimeout(function() {
-            Typer.autoAddText(100);
             setTimeout(function() {
-                Typer.text = "Are you sure? [Y/N]: ";
-                Typer.index = 0;
-                Typer.responseText(100, oriStr = $("#console").html());
+                Typer.autoAddText(100);
                 setTimeout(function() {
-                    Typer.text = "Y<br/><br/>Welcome to 2019 NTU IM CAMP !!!";
+                    Typer.text = "Are you sure? [Y/N]: ";
                     Typer.index = 0;
                     Typer.responseText(100, oriStr = $("#console").html());
-                }, 3000);
-            }, 1000);
-        }, 5000);
+                    setTimeout(function() {
+                        Typer.text = "Y<br/><br/>Welcome to 2019 NTU IM CAMP !!!";
+                        Typer.index = 0;
+                        Typer.responseText(100, oriStr = $("#console").html());
+                    }, 3000);
+                }, 1000);
+            }, 5000);
+        }
     }, 6000);
 }
 
@@ -49,7 +65,7 @@ function aniInit() {
     $("#logo-google").css("animation", "google-init 2s linear forwards");
     $("#logo-spotify").css("animation", "spotify-init 2s linear forwards");
     $("#logo-youtube").css("animation", "youtube-init 2s linear forwards");
-    $(".logo").fadeIn(2000);
+    $(".logo").fadeIn(2500);
 
     setTimeout(function() {
         $("#logo-github").css("animation", "myOrbit 5s linear infinite");
@@ -58,7 +74,14 @@ function aniInit() {
         $("#logo-spotify").css("animation", "myOrbit 5s linear -3s infinite");
         $("#logo-youtube").css("animation", "myOrbit 5s linear -4s infinite");
     }, 2000);
+}
 
-
-
+function skipAni() {
+    $(".logo").hide();
+    $("#console").show()
+        .html("ntu_im_camp:/$ launch camp<br>Are you sure? [Y/N]: Y<br><br>Welcome to 2019 NTU IM CAMP !!!")
+        .css("top", "50vh");
+    $("#sun").css("width", "20vmin")
+        .css("top", "20vh")
+        .css("left", "calc(50vw - 10vmin)");
 }
