@@ -23,12 +23,6 @@ $(window).on('load', function() {
             shrink()
     }, 5000);
 
-    // 19 seconds
-
-    // begin = setTimeout(function() {
-    //     enterInit();
-    // }, 23000);
-
 });
 
 function shrink() {
@@ -116,5 +110,24 @@ function enterInit() {
     $(".clouds").fadeOut(4000);
     $("#console").fadeOut(2000, function() {
         $("#sun").css("animation", "sun_shrink 2s linear forwards reverse");
+        setTimeout(function(){
+            $(".planet").fadeIn(2000);
+        }, 2000);
+    });
+
+    $(".planet")
+    .mouseenter(function(){
+        $("#first-planet").css("animation-play-state", "paused");
+        $("#sec-planet").css("animation-play-state", "paused");
+        $("#third-planet").css("animation-play-state", "paused");
+        $("#forth-planet").css("animation-play-state", "paused");
+        $("#fifth-planet").css("animation-play-state", "paused");
+    })
+    .mouseleave(function(){
+        $("#first-planet").css("animation-play-state", "running");
+        $("#sec-planet").css("animation-play-state", "running");
+        $("#third-planet").css("animation-play-state", "running");
+        $("#forth-planet").css("animation-play-state", "running");
+        $("#fifth-planet").css("animation-play-state", "running");
     });
 }

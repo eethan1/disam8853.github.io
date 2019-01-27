@@ -100,7 +100,8 @@ input[type="text"]:focus {
     /*animation: sun_enlarge 2s linear 2s forwards;*/
 }
 
-.logo {
+.logo,
+.planet {
     display: none;
     position: absolute;
     width: 15vmin;
@@ -234,6 +235,29 @@ input[type="text"]:focus {
         background-position: 10000px 0;
     }
 }
+
+.planet {
+    animation: myOrbit 20s linear infinite;
+}
+
+#first-planet {}
+
+#sec-planet {
+    animation-delay: -4s;
+}
+
+#third-planet {
+    animation-delay: -8s;
+}
+
+#forth-planet {
+    animation-delay: -12s;
+}
+
+#fifth-planet {
+    animation-delay: -16s;
+}
+
 
 .stars,
 .twinkling,
