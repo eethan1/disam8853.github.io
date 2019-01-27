@@ -111,7 +111,9 @@ function enterInit() {
     $("#console").fadeOut(2000, function() {
         $("#sun").css("animation", "sun_shrink 2s linear forwards reverse");
         setTimeout(function() {
-            $(".planet").fadeIn(2000);
+            // must set to 2000 !!!!
+            $(".planet").fadeIn(200);
+            // $("#rocket").fadeIn(200);
         }, 2000);
     });
 
@@ -119,10 +121,27 @@ function enterInit() {
         .on("mouseenter touchstart", function() {
             $(".planet").css("-webkit-animation-play-state", "paused")
                 .css("animation-play-state", "paused");
+            $(this).css("width", "25vmin");
 
         })
         .on("mouseleave touchend", function() {
             $(".planet").css("-webkit-animation-play-state", "running")
                 .css("animation-play-state", "running");
+            $(this).css("width", "15vmin");
+        })
+        .on("click", function() {
+            var el = $(this),
+                newone = el.clone(true),
+                loc = el.css("transform");
+
+            newone.css({
+                "animation": "none",
+                "transform": loc
+            });
+            el.before(newone);
+            el.remove();
+
+            // $(this).effect("scale", { percent: 1000 }, 2000);
+            console.log(loc);
         });
 }

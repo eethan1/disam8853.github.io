@@ -3,6 +3,7 @@
 body {
     background-color: black;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 /*skip button*/
@@ -236,8 +237,18 @@ input[type="text"]:focus {
     }
 }
 
+#rocket {
+	display: none;
+	position: absolute;
+	width: 30vw;
+	left: 35vw;
+	bottom: -5vw;
+	transform: rotate(-74deg);
+}
+
 .planet {
     animation: myOrbit 20s linear infinite;
+    transition: width 200ms linear;
 }
 
 #information-planet {}
