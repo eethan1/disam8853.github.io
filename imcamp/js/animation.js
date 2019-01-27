@@ -118,13 +118,13 @@ function enterInit() {
     });
 
     $(".planet")
-        .on("mouseenter touchstart", function() {
+        .on("mouseenter", function() {
             $(".planet").css("-webkit-animation-play-state", "paused")
                 .css("animation-play-state", "paused");
             $(this).css("width", "25vmin");
 
         })
-        .on("mouseleave touchend", function() {
+        .on("mouseleave", function() {
             $(".planet").css("-webkit-animation-play-state", "running")
                 .css("animation-play-state", "running");
             $(this).css("width", "15vmin");
