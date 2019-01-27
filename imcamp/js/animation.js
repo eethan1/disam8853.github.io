@@ -129,7 +129,7 @@ function enterInit() {
                 .css("animation-play-state", "running");
             $(this).css("width", "15vmin");
         })
-        .on("click", function() {
+        .on("click touchstart", function() {
             // stop all planets
             $(".planet").each(function() {
                 var el = $(this),
