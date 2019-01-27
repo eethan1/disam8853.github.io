@@ -110,19 +110,19 @@ function enterInit() {
     $(".clouds").fadeOut(4000);
     $("#console").fadeOut(2000, function() {
         $("#sun").css("animation", "sun_shrink 2s linear forwards reverse");
-        setTimeout(function(){
+        setTimeout(function() {
             $(".planet").fadeIn(2000);
         }, 2000);
     });
 
     $(".planet")
-    .mouseenter(function(){
-        $(".planet").css("-webkit-animation-play-state", "paused")
-                    .css("animation-play-state", "paused");
+        .on("mouseenter touchstart", function() {
+            $(".planet").css("-webkit-animation-play-state", "paused")
+                .css("animation-play-state", "paused");
 
-    })
-    .mouseleave(function(){
-        $(".planet").css("-webkit-animation-play-state", "running")
-                    .css("animation-play-state", "running");
-    });
+        })
+        .on("mouseleave touchend", function() {
+            $(".planet").css("-webkit-animation-play-state", "running")
+                .css("animation-play-state", "running");
+        });
 }
