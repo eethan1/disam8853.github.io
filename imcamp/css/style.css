@@ -240,21 +240,21 @@ input[type="text"]:focus {
     animation: myOrbit 20s linear infinite;
 }
 
-#first-planet {}
+#information-planet {}
 
-#sec-planet {
+#photos-planet {
     animation-delay: -4s;
 }
 
-#third-planet {
+#signup-planet {
     animation-delay: -8s;
 }
 
-#forth-planet {
+#about-planet {
     animation-delay: -12s;
 }
 
-#fifth-planet {
+#course-planet {
     animation-delay: -16s;
 }
 

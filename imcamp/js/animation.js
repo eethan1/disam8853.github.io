@@ -117,17 +117,12 @@ function enterInit() {
 
     $(".planet")
     .mouseenter(function(){
-        $("#first-planet").css("animation-play-state", "paused");
-        $("#sec-planet").css("animation-play-state", "paused");
-        $("#third-planet").css("animation-play-state", "paused");
-        $("#forth-planet").css("animation-play-state", "paused");
-        $("#fifth-planet").css("animation-play-state", "paused");
+        $(".planet").css("-webkit-animation-play-state", "paused")
+                    .css("animation-play-state", "paused");
+
     })
     .mouseleave(function(){
-        $("#first-planet").css("animation-play-state", "running");
-        $("#sec-planet").css("animation-play-state", "running");
-        $("#third-planet").css("animation-play-state", "running");
-        $("#forth-planet").css("animation-play-state", "running");
-        $("#fifth-planet").css("animation-play-state", "running");
+        $(".planet").css("-webkit-animation-play-state", "running")
+                    .css("animation-play-state", "running");
     });
 }
