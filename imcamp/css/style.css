@@ -238,13 +238,31 @@ input[type="text"]:focus {
 }
 
 #rocket {
-	display: none;
-	position: absolute;
-	width: 30vw;
-	left: -12vw;
-	bottom: -5vw;
-	/*transform: rotate(-74deg);*/
-	transform: rotate(-33deg);
+    display: none;
+    position: absolute;
+    width: 30vw;
+    left: -10vw;
+    bottom: -3vw;
+    /*transform: rotate(-74deg);*/
+    transform: rotate(-33deg);
+    animation: rocket-ani 3s ease-in-out infinite;
+}
+
+@keyframes rocket-ani {
+    0% {
+        left: -10vw;
+        bottom: -3vw;
+    }
+
+    50% {
+        left: -15vw;
+        bottom: -8vw;
+    }
+
+    100% {
+        left: -10vw;
+        bottom: -3vw;
+    }
 }
 
 .planet {
