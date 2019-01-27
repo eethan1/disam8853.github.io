@@ -241,9 +241,10 @@ input[type="text"]:focus {
 	display: none;
 	position: absolute;
 	width: 30vw;
-	left: 35vw;
+	left: -12vw;
 	bottom: -5vw;
-	transform: rotate(-74deg);
+	/*transform: rotate(-74deg);*/
+	transform: rotate(-33deg);
 }
 
 .planet {

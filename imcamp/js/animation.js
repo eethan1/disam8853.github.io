@@ -112,8 +112,8 @@ function enterInit() {
         $("#sun").css("animation", "sun_shrink 2s linear forwards reverse");
         setTimeout(function() {
             // must set to 2000 !!!!
-            $(".planet").fadeIn(200);
-            // $("#rocket").fadeIn(200);
+            $(".planet").fadeIn(2000);
+            $("#rocket").fadeIn(200);
         }, 2000);
     });
 
@@ -130,18 +130,20 @@ function enterInit() {
             $(this).css("width", "15vmin");
         })
         .on("click", function() {
-            var el = $(this),
-                newone = el.clone(true),
-                loc = el.css("transform");
+            // stop all planets
+            $(".planet").each(function() {
+                var el = $(this),
+                    newone = el.clone(true),
+                    loc = el.css("transform");
 
-            newone.css({
-                "animation": "none",
-                "transform": loc
+                newone.css({
+                    "animation": "none",
+                    "transform": loc
+                });
+                el.before(newone);
+                el.remove();
+
+                console.log(loc);
             });
-            el.before(newone);
-            el.remove();
-
-            // $(this).effect("scale", { percent: 1000 }, 2000);
-            console.log(loc);
         });
 }
