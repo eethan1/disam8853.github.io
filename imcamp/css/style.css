@@ -318,13 +318,13 @@ input[type="text"]:focus {
     background-position: center center;
 }
 
-#info-header {
+.info-header {
 	height: 23vw;
 	text-align: center;
 	overflow: hidden;
 }
 
-#landed-rocket-img {
+.landed-rocket-img {
 	width: 30vw;
 	transform: translateY(0vw) rotate(-73deg);
 	transition: transform 2s ease-out;

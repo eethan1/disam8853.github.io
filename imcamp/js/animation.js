@@ -167,7 +167,7 @@ function enterInit() {
                     } else if (st == "course") {
                         $("#course").fadeIn(2000);
                     }
-                    $("#landed-rocket-img").css("transform", "translateY(12vw) rotate(-73deg)");
+                    $(".landed-rocket-img").css("transform", "translateY(12vw) rotate(-73deg)");
                 });
             });
         });
