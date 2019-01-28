@@ -68,8 +68,8 @@ function shrink() {
                             });
                             $("#logo-fb").before(newone);
                             enterInit();
-                        }, 3000);
-                    }, 2000);
+                        }, 3500);
+                    }, 3000);
                 }, 3000);
             });
         }
@@ -113,7 +113,7 @@ function enterInit() {
         setTimeout(function() {
             // must set to 2000 !!!!
             $(".planet").fadeIn(2000);
-            $("#rocket").fadeIn(200);
+            $("#rocket").fadeIn(2000);
         }, 2000);
     });
 
@@ -145,5 +145,6 @@ function enterInit() {
 
                 console.log(loc);
             });
+            // landing on the planet, diplay the information
         });
 }
