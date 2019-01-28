@@ -16,6 +16,7 @@
     <div class="stars"></div>
     <div class="twinkling"></div>
     <div class="clouds"></div>
+    <div class="white-light"></div>
     <div id="nav">
         <button id="skip-btn">Skip
             <img src="img/rocket.png" id="skip-img">
@@ -28,26 +29,64 @@
         <img src="img/google.png" alt="" id="logo-google" class="logo">
         <img src="img/spotify.png" alt="" id="logo-spotify" class="logo">
         <img src="img/youtube.png" alt="" id="logo-youtube" class="logo">
-        
-        <img src="img/planet/1.png" class="planet" id="information-planet">
-        <img src="img/planet/2.png" class="planet" id="photos-planet">
-        <img src="img/planet/3.png" class="planet" id="signup-planet">
-        <img src="img/planet/4.png" class="planet" id="about-planet">
-        <img src="img/planet/5.png" class="planet" id="course-planet">
+        <img src="img/planet/1.png" class="planet" id="information-planet" data-cate="information">
+        <img src="img/planet/2.png" class="planet" id="photos-planet" data-cate="photos">
+        <img src="img/planet/3.png" class="planet" id="signup-planet" data-cate="signup">
+        <img src="img/planet/4.png" class="planet" id="about-planet" data-cate="about">
+        <img src="img/planet/5.png" class="planet" id="course-planet" data-cate="course">
 	</div>
-	<img src="img/rocket.png" alt="Where are we going?" id="rocket">
+        <img src="img/rocket.png" alt="Where are we going?" id="rocket">
         <div id="console">
             ntu_im_camp:/$
             <!-- <input type="text" id="cli"> -->
         </div>
-        <!-- jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- jqueyr ui -->
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-        <!-- javascript -->
-        <!-- <script src="js/console.js"></script> -->
-        <script src="js/hackertyper.js"></script>
-        <script src="js/animation.js"></script>
+        <div id="information" class="info">
+            <div id="info-header">
+                <img src="img/rocket.png" id="landed-rocket-img">
+			</div>
+            <div class="info-container">
+                <h1>information</h1>
+            </div>
+            </div>
+            <div id="photos" class="info">
+                <div id="info-header">
+                    <img src="img/rocket.png" id="landed-rocket-img">
+				</div>
+                    <div class="info-container">
+                        <h2>photos</h2>
+                    </div>
+                </div>
+                <div id="signup" class="info">
+                    <div id="info-header">
+                        <img src="img/rocket.png" id="landed-rocket-img">
+			</div>
+                        <div class="info-container">
+                            <h1>sign up</h1>
+                        </div>
+                    </div>
+                    <div id="about" class="info">
+                        <div id="info-header">
+                            <img src="img/rocket.png" id="landed-rocket-img">
+			</div>
+                            <div class="info-container">
+                                <h1>about us</h1>
+                            </div>
+                        </div>
+                        <div id="course" class="info">
+                            <div id="info-header">
+                                <img src="img/rocket.png" id="landed-rocket-img">
+			</div>
+                                <div class="info-container">
+                                    <h1>course selection</h1>
+                                </div>
+                            </div>
+                            <!-- jquery -->
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                            <!-- jqueyr ui -->
+                            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+                            <!-- javascript -->
+                            <script src="js/hackertyper.js"></script>
+                            <script src="js/animation.js"></script>
 </body>
 
 </html>

@@ -106,14 +106,15 @@ function skipAni() {
 }
 
 function enterInit() {
+    window.scrollBy(0, -100);
     $("#nav").fadeOut(2000);
     $(".clouds").fadeOut(4000);
     $("#console").fadeOut(2000, function() {
         $("#sun").css("animation", "sun_shrink 2s linear forwards reverse");
         setTimeout(function() {
             // must set to 2000 !!!!
-            $(".planet").fadeIn(2000);
-            $("#rocket").fadeIn(2000);
+            $(".planet").fadeIn(1000);
+            $("#rocket").fadeIn(1000);
         }, 2000);
     });
 
@@ -130,7 +131,7 @@ function enterInit() {
             $(this).css("width", "15vmin");
         })
         .on("click touchstart", function() {
-            // stop all planets
+            // stop all planets (maybe not necessary)
             $(".planet").each(function() {
                 var el = $(this),
                     newone = el.clone(true),
@@ -146,5 +147,28 @@ function enterInit() {
                 console.log(loc);
             });
             // landing on the planet, diplay the information
+            var st = $(this).data("cate");
+
+            $("#rocket").fadeOut(2000);
+            $(".planet").fadeOut(2000);
+            $(".white-light").fadeIn(2000, function() {
+                $("#sun").fadeOut(2000);
+
+                $(".white-light").fadeOut(2000, function() {
+                    // on the planet!
+                    if (st == "information") {
+                        $("#information").fadeIn(2000);
+                    } else if (st == "photos") {
+                        $("#photos").fadeIn(2000);
+                    } else if (st == "signup") {
+                        $("#signup").fadeIn(2000);
+                    } else if (st == "about") {
+                        $("#about").fadeIn(2000);
+                    } else if (st == "course") {
+                        $("#course").fadeIn(2000);
+                    }
+                    $("#landed-rocket-img").css("transform", "translateY(12vw) rotate(-73deg)");
+                });
+            });
         });
 }

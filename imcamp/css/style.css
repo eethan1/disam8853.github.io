@@ -3,7 +3,7 @@
 body {
     background-color: black;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /*skip button*/
@@ -288,6 +288,47 @@ input[type="text"]:focus {
     animation-delay: -16s;
 }
 
+.white-light {
+    display: none;
+    z-index: 999;
+    background-color: white;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.info {
+	display: none;
+}
+
+.info-container {
+	border: 2px solid;
+
+	/*need to be responsive !important*/
+	width: 70vw;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+#photos, .info {
+    background-image: url('https://www.jpl.nasa.gov/images/dawn/PIA22530_adj.jpg');
+    min-height: 100vh;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#info-header {
+	height: 23vw;
+	text-align: center;
+	overflow: hidden;
+}
+
+#landed-rocket-img {
+	width: 30vw;
+	transform: translateY(0vw) rotate(-73deg);
+	transition: transform 2s ease-out;
+}
 
 .stars,
 .twinkling,
