@@ -132,27 +132,28 @@ function enterInit() {
         })
         .on("click touchstart", function() {
             // stop all planets (maybe not necessary)
-            // $(".planet").each(function() {
-            //     var el = $(this),
-            //         newone = el.clone(true),
-            //         loc = el.css("transform");
+            $(".planet").each(function() {
+                var el = $(this),
+                    newone = el.clone(true),
+                    loc = el.css("transform");
 
-            //     newone.css({
-            //         "animation": "none",
-            //         "transform": loc
-            //     });
-            //     el.before(newone);
-            //     el.remove();
+                newone.css({
+                    "animation": "none",
+                    "transform": loc
+                });
+                el.before(newone);
+                el.remove();
 
-            //     console.log(loc);
-            // });
+                console.log(loc);
+            });
             // landing on the planet, diplay the information
             var st = $(this).data("cate");
 
             $("#rocket").fadeOut(2000);
-            $(".planet").fadeOut(2000);
+            
             $(".white-light").fadeIn(2000, function() {
                 $("#sun").fadeOut(2000);
+                $(".planet").fadeOut(2000);
 
                 $(".white-light").fadeOut(2000, function() {
                     // on the planet!
