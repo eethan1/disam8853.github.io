@@ -113,8 +113,8 @@ function enterInit() {
         $("#sun").css("animation", "sun_shrink 2s linear forwards reverse");
         setTimeout(function() {
             // must set to 2000 !!!!
-            $(".planet").fadeIn(1000);
-            $("#rocket").fadeIn(1000);
+            $(".planet").fadeIn(500);
+            $("#rocket").fadeIn(500);
         }, 2000);
     });
 
@@ -132,20 +132,20 @@ function enterInit() {
         })
         .on("click touchstart", function() {
             // stop all planets (maybe not necessary)
-            $(".planet").each(function() {
-                var el = $(this),
-                    newone = el.clone(true),
-                    loc = el.css("transform");
+            // $(".planet").each(function() {
+            //     var el = $(this),
+            //         newone = el.clone(true),
+            //         loc = el.css("transform");
 
-                newone.css({
-                    "animation": "none",
-                    "transform": loc
-                });
-                el.before(newone);
-                el.remove();
+            //     newone.css({
+            //         "animation": "none",
+            //         "transform": loc
+            //     });
+            //     el.before(newone);
+            //     el.remove();
 
-                console.log(loc);
-            });
+            //     console.log(loc);
+            // });
             // landing on the planet, diplay the information
             var st = $(this).data("cate");
 
