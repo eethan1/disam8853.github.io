@@ -240,9 +240,9 @@ input[type="text"]:focus {
 #rocket {
     display: none;
     position: absolute;
-    width: 30vw;
-    left: -10vw;
-    bottom: -3vw;
+    width: 30vmin;
+    left: -10vmin;
+    bottom: -3vmin;
     /*transform: rotate(-74deg);*/
     transform: rotate(-33deg);
     animation: rocket-ani 3s ease-in-out infinite;
@@ -250,18 +250,18 @@ input[type="text"]:focus {
 
 @keyframes rocket-ani {
     0% {
-        left: -10vw;
-        bottom: -3vw;
+        left: -10vmin;
+        bottom: -3vmin;
     }
 
     50% {
-        left: -15vw;
-        bottom: -8vw;
+        left: -15vmin;
+        bottom: -8vmin;
     }
 
     100% {
-        left: -10vw;
-        bottom: -3vw;
+        left: -10vmin;
+        bottom: -3vmin;
     }
 }
 
@@ -325,8 +325,8 @@ input[type="text"]:focus {
 }
 
 .landed-rocket-img {
-	width: 30vw;
-	transform: translateY(0vw) rotate(-73deg);
+	width: 30vmin;
+	transform: translateY(0vmin) rotate(-73deg);
 	transition: transform 2s ease-out;
 }
 
