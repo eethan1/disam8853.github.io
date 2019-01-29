@@ -1,4 +1,10 @@
-var skip = false;
+var skip = false,
+    skipAll = false;
+if (location.hash.substr(1) == "skip") {
+    skip = true;
+    skipAll = true;
+    skipAllAni();
+}
 
 $(function() {
     $("#skip-btn").hover(function() {
@@ -23,6 +29,9 @@ $(window).on('load', function() {
             shrink()
     }, 5000);
 
+    // 跳轉方法
+    // var hash = location.hash.substr(1);
+    // console.log(hash);
 });
 
 function shrink() {
@@ -105,6 +114,68 @@ function skipAni() {
     setTimeout(function() { enterInit(); }, 1000);
 }
 
+function skipAllAni() {
+    $(".logo").hide();
+    $("#console").hide();
+    $("#nav").hide();
+    $(".clouds").hide();
+    $("#sun").css("animation", "sunshine 4s linear infinite");
+    $(".planet").fadeIn(1000);
+    $("#rocket").fadeIn(1000);
+
+    $(".planet")
+        .on("mouseenter", function() {
+            $(".planet").css("-webkit-animation-play-state", "paused")
+                .css("animation-play-state", "paused");
+            $(this).css("width", "25vmin");
+
+        })
+        .on("mouseleave", function() {
+            $(".planet").css("-webkit-animation-play-state", "running")
+                .css("animation-play-state", "running");
+            $(this).css("width", "15vmin");
+        })
+        .on("click touchstart", function() {
+            // stop all planets (maybe not necessary)
+            $(".planet").each(function() {
+                var el = $(this),
+                    newone = el.clone(true),
+                    loc = el.css("transform");
+
+                newone.css({
+                    "animation": "none",
+                    "transform": loc
+                });
+                el.before(newone);
+                el.remove();
+
+                console.log(loc);
+            });
+            // landing on the planet, diplay the information
+            var st = $(this).data("cate");
+
+            $("#rocket").fadeOut(2000);
+
+            $(".white-light").fadeIn(2000, function() {
+                $("#sun").fadeOut(2000);
+                $(".planet").fadeOut(2000, function() {
+                    if (st == "information") {
+                        window.location.href = "information/index.html";
+                    } else if (st == "photos") {
+                        window.location.href = "photos/index.html";
+                    } else if (st == "signup") {
+                        window.location.href = "signup/index.html";
+                    } else if (st == "about") {
+                        window.location.href = "about/index.html";
+                    } else if (st == "course") {
+                        window.location.href = "course/index.html";
+                    }
+
+                });
+            });
+        });
+}
+
 function enterInit() {
     window.scrollBy(0, -100);
     $("#nav").fadeOut(2000);
@@ -115,6 +186,18 @@ function enterInit() {
             // must set to 2000 !!!!
             $(".planet").fadeIn(500);
             $("#rocket").fadeIn(500);
+            var el = $("#sun"),
+                newone = el.clone(true);
+
+            newone.css({
+                "animation": "sunshine 4s linear infinite",
+                "width": "30vmin",
+                "top": "calc(50vh - 14.28vmin)",
+                "left": "calc(50vw - 15vmin)"
+            });
+            el.before(newone);
+            el.remove();
+
         }, 2000);
     });
 
@@ -150,26 +233,40 @@ function enterInit() {
             var st = $(this).data("cate");
 
             $("#rocket").fadeOut(2000);
-            
+
             $(".white-light").fadeIn(2000, function() {
                 $("#sun").fadeOut(2000);
-                $(".planet").fadeOut(2000);
-
-                $(".white-light").fadeOut(2000, function() {
-                    // on the planet!
+                $(".planet").fadeOut(2000, function() {
                     if (st == "information") {
-                        $("#information").fadeIn(2000);
+                        window.location.href = "information/index.html";
                     } else if (st == "photos") {
-                        $("#photos").fadeIn(2000);
+                        window.location.href = "photos/index.html";
                     } else if (st == "signup") {
-                        $("#signup").fadeIn(2000);
+                        window.location.href = "signup/index.html";
                     } else if (st == "about") {
-                        $("#about").fadeIn(2000);
+                        window.location.href = "about/index.html";
                     } else if (st == "course") {
-                        $("#course").fadeIn(2000);
+                        window.location.href = "course/index.html";
                     }
-                    $(".landed-rocket-img").css("transform", "translateY(12vmin) rotate(-73deg)");
+
                 });
+
+                // 跳轉到目的地頁面，以下可能會省略
+                // $(".white-light").fadeOut(2000, function() {
+                //     // on the planet!
+                //     if (st == "information") {
+                //         $("#information").fadeIn(2000);
+                //     } else if (st == "photos") {
+                //         $("#photos").fadeIn(2000);
+                //     } else if (st == "signup") {
+                //         $("#signup").fadeIn(2000);
+                //     } else if (st == "about") {
+                //         $("#about").fadeIn(2000);
+                //     } else if (st == "course") {
+                //         $("#course").fadeIn(2000);
+                //     }
+                //     $(".landed-rocket-img").css("transform", "translateY(12vmin) rotate(-73deg)");
+                // });
             });
         });
 }
