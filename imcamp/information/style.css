@@ -1,6 +1,7 @@
 body {
     background-color: black;
     min-height: 100vh;
+    font-family: “Arial”, ”Microsoft YaHei”, ”黑體”, ”宋體”, sans-serif;
 }
 
 .white-light {
@@ -45,13 +46,22 @@ body {
     bottom: 1vmin;
     left: 0;
     font-size: 2rem;
-    background-color: rgba(250,250,250,0.6);
+    background-color: rgba(250, 250, 250, 0.6);
     border-radius: 8px;
     padding: 0.3rem;
 }
 
-.back a {
+a {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+.back a:hover {
+    filter: drop-shadow(0px 0 3vw rgba(0, 0, 0, 1));
 }
 
 .landed-rocket-img {
@@ -86,5 +96,47 @@ body {
 
 .text {
     position: relative;
+    /*background-color: rgba(250,250,250,0.2);
+    border-radius: 30px;*/
     z-index: 1;
+}
+
+.text-header {
+    height: 10vmin;
+    /**/
+    text-align: center;
+}
+
+#content {
+    position: relative;
+}
+
+.page-container {
+    margin: auto 7vw;
+}
+
+.paginationjs-prev {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 9vmin);
+}
+
+.paginationjs-next {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 9vmin);
+}
+
+.paginationjs-prev:hover, .paginationjs-next:hover {
+    transform: scale(1.5,1.5);
+    transition: transform 250ms ease-in;
+}
+
+.paginationjs {
+    text-align: center;
+}
+
+.paginationjs li {
+    display: inline;
+    font-size: 10vmin;
 }
