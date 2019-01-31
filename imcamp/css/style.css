@@ -263,6 +263,7 @@ input[type="text"]:focus {
     /*transform: rotate(-74deg);*/
     transform: rotate(-33deg);
     animation: rocket-ani 3s ease-in-out infinite;
+    transition: bottom 3s linear, left 3s linear;
 }
 
 @keyframes rocket-ani {

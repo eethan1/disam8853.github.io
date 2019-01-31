@@ -213,7 +213,9 @@ function enterInit() {
                 .css("animation-play-state", "running");
             $(this).css("width", "15vmin");
         })
-        .on("click touchstart", function() {
+        .on("click", function() {
+            var offset = $(this).offset();
+
             // stop all planets (maybe not necessary)
             $(".planet").each(function() {
                 var el = $(this),
@@ -231,8 +233,22 @@ function enterInit() {
             });
             // landing on the planet, diplay the information
             var st = $(this).data("cate");
+            // land the rocket on the planet
+            // var el = $("#rocket"),
+            //     rocOff = el.offset(),
+            //     newRocket = el.clone(true),
+            //     rocBottom = $(window).height() - offset.top - newRocket.height()*Math.cos(57*Math.PI/180);
+            // newRocket.css({
+            //         "animation": "none"
+            //     });
+            // el.before(newRocket);
+            
+            // el.remove();
 
+            // console.log(offset);
+            // newRocket.css({"bottom": rocBottom, "left": offset.left});
             $("#rocket").fadeOut(2000);
+
 
             $(".white-light").fadeIn(2000, function() {
                 $("#sun").fadeOut(2000);
@@ -250,23 +266,6 @@ function enterInit() {
                     }
 
                 });
-
-                // 跳轉到目的地頁面，以下可能會省略
-                // $(".white-light").fadeOut(2000, function() {
-                //     // on the planet!
-                //     if (st == "information") {
-                //         $("#information").fadeIn(2000);
-                //     } else if (st == "photos") {
-                //         $("#photos").fadeIn(2000);
-                //     } else if (st == "signup") {
-                //         $("#signup").fadeIn(2000);
-                //     } else if (st == "about") {
-                //         $("#about").fadeIn(2000);
-                //     } else if (st == "course") {
-                //         $("#course").fadeIn(2000);
-                //     }
-                //     $(".landed-rocket-img").css("transform", "translateY(12vmin) rotate(-73deg)");
-                // });
             });
         });
 }
